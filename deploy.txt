@@ -1,0 +1,22 @@
+1.- Creación recurso Azure
+az login
+az account set --subscription 44599270-6716-4cb9-b4df-de3e91196929
+az group create --name rsgCertus --location westus
+az config set defaults.group=rsgCertus defaults.location=westus
+az webapp up --name appdemo-deploycertus --logs --launch-browser
+
+2.- 
+
+git init && /
+git add -A && /
+git commit -m "Initial Commit"
+
+3.- Configure new deployment user and password
+az webapp deployment user set --user-name kendor --password pwdkendor --subscription 44599270-6716-4cb9-b4df-de3e91196929
+
+az webapp deployment source config-local-git --name appdemo-deploycertus
+
+git remote add azure https://otiniano.ics@outlook.com@appdemo-deploycertus.scm.azurewebsites.net/appdemo-deploycertus.git
+
+git add . && git commit -m "change the message"
+git push azure main:master

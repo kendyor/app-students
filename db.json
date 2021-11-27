@@ -1,0 +1,32 @@
+{
+  "articulos": [
+    {
+      "id": "zoqDGNOk",
+      "nombre": "articulo 1",
+      "precio": 100
+    },
+    {
+      "id": "b_Z-HkHj",
+      "nombre": "articulo 2",
+      "precio": 200
+    },
+    {
+      "id": "GA3DA2c4",
+      "nombre": "articulo 2",
+      "precio": 200
+    },
+    {
+      "id": "B5lvSWHi"
+    },
+    {
+      "id": "ow35_v00",
+      "nombre": "articulo clase semana 12",
+      "precio": 5,
+      "marca": "salon",
+      "stock": 12
+    },
+    {
+      "id": "-cXdYoQM"
+    }
+  ]
+}

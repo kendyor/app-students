@@ -1,0 +1,19 @@
+Prerequisitos:
+    Instalar docker for desktop
+    Crear su cuenta en dockerhub
+
+Comandos utiles:
+    docker images
+    docker ps
+    docker kill idcontainer
+
+Steps:
+    1) Crear el archivo dockerfile
+    2) Crear la imagen (usuariodockerhub/nombrerepositorydockerhub)
+        docker build . -t kendyor/certusappdemo
+    
+    3) Creamos un contenedor a partir de la imagen (2)
+        docker run -p 8000:80 -d kendyor/certusappdemo:latest
+    
+    4) Publicar la imagen en dockerhub
+        docker push kendyor/certusappdemo
