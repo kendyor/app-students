@@ -1,0 +1,10 @@
+#En local
+git init
+git add .
+git commit -m "mensaje"
+
+#…or push an existing repository from the command line
+
+git remote add origin https://github.com/kendyor/app-students.git
+git branch -M main
+git push -u origin main
