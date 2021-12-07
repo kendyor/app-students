@@ -49,7 +49,7 @@ app.db = db; //Definimos la BD
 //Definimos las variables necesarias.
 app.use( express.json() );
 app.use( morgan("dev") );
-app.use(cors({origin: 'http://localhost:10801'}));
+app.use(cors());
 
 
 //
