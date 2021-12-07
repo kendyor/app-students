@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const low = require("lowdb");
 const swaggerUI = require("swagger-ui-express");
 const swaggerJsDoc = require("swagger-jsdoc");
+const path = require('path')
 
 const articulosRouter = require("./routes/articulos");
 
