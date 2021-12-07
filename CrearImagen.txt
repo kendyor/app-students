@@ -17,3 +17,9 @@ Steps:
     
     4) Publicar la imagen en dockerhub
         docker push kendyor/certusappdemo
+
+    5) Entrar al contendor:
+        docker exec -it <container_id_or_name /bin/bash
+    
+    6) Invocar al contenedor desde dentro del contenedor.
+        curl http://localhost:80/articulos
