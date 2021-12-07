@@ -10,7 +10,7 @@ const path = require('path')
 const articulosRouter = require("./routes/articulos");
 
 //Determinamos el puerto del EndPoint
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const options = {
     definition: {
