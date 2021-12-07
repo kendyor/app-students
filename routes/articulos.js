@@ -85,18 +85,20 @@ const idLength = 8;
  */
 
 //Obtener la lista de articulos
+const articulos = [];
 router.get("/", (request, response) =>{
-    const articulos = request.app.db.get("articulos");
-    //response.send("En plena clase METODO GET");
-    // response.header('Access-Control-Allow-Origin', '*');
+    // const articulos = request.app.db.get("articulos");
+
 
     response.send(articulos);
 });
 
 //obtener un articulo desde la ID
 router.get("/:id", (req, resp) => {
-    const articulo = req.app.db.get("articulos")
-                    .find({id: req.params.id }).value();
+    // const articulo = req.app.db.get("articulos")
+                    // .find({id: req.params.id }).value();
+    const articulo = articulos.find({id: req.params.id }).value();
+
     if(!articulo){
         resp.sendStatus(404);
     }
@@ -111,7 +113,7 @@ router.post("/", (peticion, responde) => {
             ...peticion.body,
         };
 
-        peticion.app.db.get("articulos").push(articulo).write();
+        // peticion.app.db.get("articulos").push(articulo).write();
         responde.send(articulo);
 
     }catch( error ){

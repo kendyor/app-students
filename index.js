@@ -31,14 +31,15 @@ const specs = swaggerJsDoc(options);
 
 
 //Obtenemos la libreria controlador del Archivo
-const FileSync = require("lowdb/adapters/FileSync");
+// const FileSync = require("lowdb/adapters/FileSync");
 
 //Creamos el archivo db.json
-const adapter = new FileSync("db.json");
-const db = low(adapter);
+// const adapter = new FileSync("db.json");
+// const db = low(adapter);
+const db = {articulos: [] };
 
 // Inicializamos la BD
-db.defaults( {articulos: [] } ).write();
+// db.defaults( {articulos: [] } ).write();
 console.log('Inicializamos la BD');
 
 const app = express(); //Creamos el aplicativo
